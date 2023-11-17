@@ -106,6 +106,16 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var acumulador = 1
+   if (arguments.length === 0){
+      return 0
+   }else if (arguments.length === 1){
+      return arguments[0]
+   }else{
+      for(i = 0; i < arguments.length; i++){
+         acumulador = acumulador * arguments[i]
+      }
+   }return acumulador
 }
 
 function cuentoElementos(array) {
@@ -155,6 +165,16 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+  var respuesta = [];
+  for (i = 0; i < array.length; i++){
+   if(array[i] == "Enero" || array[i] == "Marzo" || array[i] == "Noviembre" ){
+      respuesta.push(array[i]);
+   }
+  }if (respuesta.length == 3){
+   return respuesta
+  }else {
+   return "No se encontraron los meses pedidos"
+  }
 }
 
 function tablaDelSeis() {
@@ -190,6 +210,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var respuesta = []
+   var suma = num
+   for (i = 0; i < 10; i++){
+      suma = suma + 2;
+      if (suma === i){
+         break
+      }else {
+         respuesta.push(suma);
+      }
+   }if(respuesta.length < 10){
+      return "Se interrumpió la ejecución"
+   }else if (respuesta.length === 10){
+      return respuesta
+   }
+
 }
 
 function continueStatement(num) {
@@ -199,6 +234,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var respuesta = []
+   var suma = num
+   for(i = 0; i < 10; i++){
+      if(i === 5){
+         continue
+      }else {
+         suma = suma + 2;
+         respuesta.push(suma)
+      }
+   }return respuesta
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
