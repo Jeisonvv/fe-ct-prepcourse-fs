@@ -36,7 +36,7 @@ for(var prop in mundo){
 };
 //this
 var mascota ={
-    Animal: 'perro',
+    Animal: 'gato',
     raza: 'charpein',
     Amistoso: 'true',
     dueño: 'jeison vargas',
