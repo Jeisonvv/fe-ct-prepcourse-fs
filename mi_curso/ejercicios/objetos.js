@@ -34,7 +34,7 @@ var mundo = {continentes: 7 , paises: 195 , ocenanos: 5};
 for(var prop in mundo){
     console.log("Esta es la propiedad: " + prop + " son " + mundo[prop])
 };
-//this
+//this: se utiliza antes de la propiedad para que js sepa que es un objeto 
 var mascota ={
     Animal: 'gato',
     raza: 'charpein',
